@@ -1,0 +1,119 @@
+button
+  border: none
+  outline: none
+  background-color: transparent
+  cursor: pointer
+
+.btn,
+.btn *,
+.btn *::before
+  @include myTransition
+
+.btn
+  position: relative
+  display: inline-block
+  &__icon
+    position: absolute
+    top: 50%
+    right: -40px
+    display: block
+    width: 74.5px
+    height: 13px
+    transform: translateY(-50%)
+    opacity: 1
+    & *
+      stroke: #fff
+      fill: #fff
+  &__wrap
+    position: relative
+    display: block
+    padding: 14px 46px
+    overflow: hidden
+    font-size: 14px
+    font-weight: 500
+    font-family: $ff-second
+    color: #fff
+    background-color: transparent
+    border: 2px solid #fff
+    border-radius: 27px
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      display: block
+      width: 0
+      height: 100%
+      background-color: #fff
+      z-index: -1
+  &:hover
+    .btn__wrap
+      color: $accent
+      &::before
+        width: 100%
+    .btn__icon
+      opacity: 0
+  &:active
+    opacity: 0.7
+
+.burger
+  width: 23px
+  height: 16px
+  &__line
+    position: relative
+    display: block
+    width: 23px
+    height: 2px
+    background-color: #fff
+    &::before,
+    &::after
+      content: ''
+      position: absolute
+      display: block
+      width: 23px
+      height: 2px
+      background-color: #fff
+    &::before
+      width: 14px
+      top: -7px
+    &::after
+      top: 7px
+  &:hover
+    .burger__line
+      width: 15px
+      &::before
+        width: 23px
+      &::after
+        width: 10px
+  &:active
+    opacity: 0.7
+
+.close
+  position: absolute
+  width: 40px
+  height: 40px
+  top: 50px
+  right: 50px
+  background-color: transparent
+  &::before,
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    left: 0
+    display: block
+    width: 42px
+    height: 2px
+    background-color: #fff
+    transform: translateY(-50%)
+  &::before
+    transform: rotate(45deg)
+  &::after
+    transform: rotate(-45deg)
+
+  &:hover
+    transform: rotate(90deg)
+  &:active
+    opacity: 0.7
+
+@include media-sm

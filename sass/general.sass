@@ -1,0 +1,53 @@
+/* ОБЩИЕ СТИЛИ */
+body
+  color: $color-main
+  background-color: $bg-main
+  font-family: $ff-main
+
+  @include media-sm
+
+img
+  width: 100%
+  vertical-align: middle
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+.title1
+  font-size: 58px
+  line-height: 72px
+  font-weight: 300
+  text-transform: uppercase
+  letter-spacing: 0.075em
+  color: $color-second
+
+.title2
+
+.title3
+
+.title__desc
+  font-size: 18px
+  line-height: 30px
+  font-weight: 300
+  font-family: $ff-second
+  color: $color-second
+
+.accent-color
+  color: $accent
+
+.container
+  position: relative
+  height: 100%
+  margin: 0 auto
+
+.d-flex
+  display: flex
+/* . общие стили  */
+
+
+/* Переопределение классов  */
+.fa
+  @include fa
+/* . переопределение классов */
