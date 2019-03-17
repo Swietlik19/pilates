@@ -4,14 +4,16 @@ button
   background-color: transparent
   cursor: pointer
 
-.btn,
-.btn *,
-.btn *::before
+a, button,
+a *, button *,
+a *::before, button *::before,
+a::before, button::before
   @include myTransition
 
 .btn
   position: relative
   display: inline-block
+  text-decoration: none
   &__icon
     position: absolute
     top: 50%
@@ -115,5 +117,29 @@ button
     transform: rotate(90deg)
   &:active
     opacity: 0.7
+
+.more
+  position: relative
+  font-size: 14.1px
+  font-family: $ff-main
+  line-height: 1.2
+  font-weight: 500
+  letter-spacing: 0.1em
+  color: #2a4f37
+  text-transform: uppercase
+  &::before
+    content: ''
+    position: absolute
+    top: 40%
+    right: -10px
+    width: 7px
+    height: 7px
+    border-right: 2px solid #2a4f37
+    border-top: 2px solid #2a4f37
+    transform: rotate(45deg) translateY(-50%)
+  &:hover
+    color: $accent
+    &::before
+      border-color: $accent
 
 @include media-sm

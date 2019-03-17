@@ -24,6 +24,23 @@ img
   color: $color-second
 
 .title2
+  position: relative
+  padding-left: 57px
+  font-size: 48.2px
+  line-height: 30px
+  font-weight: 400
+  opacity: 0.87
+  &::before
+    content: ''
+    position: absolute
+    top: 50%
+    left: 0
+    display: block
+    width: 37px
+    height: 2px
+    opacity: 0.87
+    background-color: #000
+    transform: translateY(-50%)
 
 .title3
 
@@ -40,10 +57,16 @@ img
 .container
   position: relative
   height: 100%
-  margin: 0 auto
+  margin: 0 15%
 
 .d-flex
   display: flex
+
+.text
+  width: 320px
+  font-size: 16.1px
+  line-height: 24px
+  opacity: 0.87
 /* . общие стили  */
 
 

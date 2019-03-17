@@ -22,6 +22,8 @@
     <header class="header" id="header">
       <div class="header__wrapper"></div>
       <div class="container header__container">
+            <div class="section-number"><span class="section-number__num">01</span><span class="section-number__line"></span><span class="section-number__circle"></span><span class="section-number__circle"></span><span class="section-number__circle"></span><span class="section-number__circle"></span><span class="section-number__circle"></span>
+            </div>
         <div class="circles"><span class="circle circle--big"></span><span class="circle circle--medium"></span><span class="circle circle--small"></span><span class="circle circle--small circle--empty"></span></div><a class="bookmark" href="https://swietlik19.github.io/crios/" target="_blank">
           <svg class="bookmark__icon">
             <use xlink:href="#iconGithub"></use>
@@ -32,7 +34,8 @@
             <div class="s-menu">
               <button class="burger" id="s-menu-burger"><span class="burger__line"></span></button>
               <ul class="s-menu__list s-menu__list--invisible">
-                <li class="s-menu__item s-menu__item--active"><a class="s-menu__link" href="#header">О пилатесе</a></li>
+                <li class="s-menu__item s-menu__item--active"><a class="s-menu__link" href="">О нас</a></li>
+                <li class="s-menu__item"><a class="s-menu__link" href="#pilates">О пилатесе</a></li>
                 <li class="s-menu__item"><a class="s-menu__link" href="#">Расписание и стоимость</a></li>
                 <li class="s-menu__item"><a class="s-menu__link" href="#">Как проходят занятия</a></li>
                 <li class="s-menu__item"><a class="s-menu__link" href="#">Отзывы</a></li>
@@ -43,16 +46,26 @@
           </nav>
           <div class="header__about">
             <h1 class="title1">Студия пилатеса</h1>
-            <div class="title__desc">Твое здоровое тело через 10 занятий</div>
-            <button class="btn header__btn"><span class="btn__wrap">Смотреть расписание</span>
+            <div class="title__desc">Твое здоровое тело через 10 занятий</div><a class="btn header__btn" href="#"><span class="btn__wrap">Смотреть расписание</span>
               <svg class="btn__icon">
                 <use xlink:href="#iconArrow"></use>
-              </svg>
-            </button>
+              </svg></a>
           </div>
         </div>
       </div>
     </header>
+    <section class="pilates" id="pilates">
+      <div class="container pilates__container">
+            <div class="section-number"><span class="section-number__num">02</span><span class="section-number__line"></span><span class="section-number__circle"></span><span class="section-number__circle"></span><span class="section-number__circle"></span><span class="section-number__circle"></span><span class="section-number__circle"></span>
+            </div>
+        <div class="pilates__content">
+          <h2 class="title2">О пилатесе</h2>
+          <p class="text pilates__text">Пилатес соединяет элементы растяжки с элементами силовой тренировки</p>
+          <p class="text pilates__text">Комплекс упражнений укрепляет мышцы пресса и спины, улучшает гибкость мышц и связок, подвижность суставов и избавляет от дискомфорта в позвоночнике</p>
+          <button class="more pilates__more">Подробнее</button>
+        </div>
+      </div>
+    </section>
     <script src="js/script.js?version=1"></script>
   </body>
 </html>
