@@ -29,11 +29,13 @@ a::before, button::before
   &__wrap
     position: relative
     display: block
-    padding: 14px 46px
+    height: 54px
+    padding: 0 46px
     overflow: hidden
     font-size: 14px
     font-weight: 500
     font-family: $ff-second
+    line-height: 50px
     color: #fff
     background-color: transparent
     border: 2px solid #fff
@@ -50,9 +52,10 @@ a::before, button::before
       z-index: -1
   &:hover
     .btn__wrap
-      color: $accent
       &::before
         width: 100%
+    span
+      color: $accent
     .btn__icon
       opacity: 0
   &:active

@@ -4,7 +4,6 @@ html(lang='ru')
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=Edge")
     title Студия пилатеса Pilates+
-    link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.0.13/css/all.css")
     link(rel='stylesheet', href='css/style.min.css?version=1')
     meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=0")
     meta(name="format-detection", content="telephone=no")
@@ -26,7 +25,7 @@ html(lang='ru')
           span.circle.circle--medium
           span.circle.circle--small
           span.circle.circle--small.circle--empty
-        a.bookmark(href="https://swietlik19.github.io/crios/" target="_blank")
+        a.bookmark(href="https://github.com/Swietlik19/pilates/" target="_blank")
           svg.bookmark__icon
             use(xlink:href="#iconGithub")
           |Code
@@ -43,7 +42,7 @@ html(lang='ru')
                 li.s-menu__item
                   a.s-menu__link(href="#pilates") О пилатесе
                 li.s-menu__item
-                  a.s-menu__link(href="#") Расписание и стоимость
+                  a.s-menu__link(href="#schedule") Расписание и стоимость
                 li.s-menu__item
                   a.s-menu__link(href="#") Как проходят занятия
                 li.s-menu__item
@@ -68,5 +67,69 @@ html(lang='ru')
           p.text.pilates__text Пилатес соединяет элементы растяжки с элементами силовой тренировки
           p.text.pilates__text Комплекс упражнений укрепляет мышцы пресса и спины, улучшает гибкость мышц и связок, подвижность суставов и избавляет от дискомфорта в позвоночнике
           button.more.pilates__more Подробнее
+
+    section.schedule(id="schedule")
+      .container.schedule__container
+        +section-number("03")
+        h2.title2 Расписание и стоимость
+        .schedule__list.owl-carousel
+          .schedule__item
+            h3.title3 Уровень
+              span новичок
+            b.schedule__price 150 руб. / занятие
+            table.schedule__table
+              tr
+                th пн
+                td 9:00 — 10:00
+              tr
+                th ср
+                td 9:00 — 10:00
+              tr
+                th пт
+                td 9:00 — 10:00
+            button.btn.schedule__btn
+              .btn__wrap
+                span Записаться
+              svg.btn__icon
+                use(xlink:href="#iconArrow")
+          .schedule__item
+            h3.title3 Уровень
+              span профи
+            b.schedule__price 200 руб. / занятие
+            table.schedule__table
+              tr
+                th пн
+                td 18:15 — 19:45
+              tr
+                th ср
+                td 18:15 — 19:45
+              tr
+                th пт
+                td 18:15 — 19:45
+            button.btn.schedule__btn
+              .btn__wrap
+                span Записаться
+              svg.btn__icon
+                use(xlink:href="#iconArrow")
+          .schedule__item
+            h3.title3 Уровень
+              span мастер
+            b.schedule__price 350 руб. / занятие
+            table.schedule__table
+              tr
+                th пн
+                td 20:00 — 21:30
+              tr
+                th ср
+                td 20:00 — 21:30
+              tr
+                th пт
+                td 20:00 — 21:30
+            button.btn.schedule__btn
+              .btn__wrap
+                span Записаться
+              svg.btn__icon
+                use(xlink:href="#iconArrow")
+
 
     script(src="js/script.js?version=1")

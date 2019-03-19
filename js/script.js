@@ -1,5 +1,6 @@
 //= ../node_modules/jquery/dist/jquery.min.js
 //= jquery.onscreen.min.js
+//= owl.carousel.min.js
 //= animate-header.js
 
 
@@ -12,6 +13,22 @@ $(document).ready(function() {
       $('html, body').animate({scrollTop: $(_href).offset().top+'px'});
       return false;
     });
+  });
+
+  $(".owl-carousel").owlCarousel({
+    margin:20,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1400:{
+            items:3
+        }
+    }
   });
 
   /* burger */
@@ -30,7 +47,7 @@ $(document).ready(function() {
 
   /* Плавная анимация контента при скролле */
   /* Переделать на реальные секции */
-  $('p').onScreen({
+  $('section, footer').onScreen({
       doIn: function() {
         $(this).animate({
           top: 0,
