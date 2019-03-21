@@ -74,14 +74,25 @@
     .btn__wrap
       &::before
         z-index: 1
-    span
-      position: absolute
-      top: 50%
-      left: 50%
-      display: block
-      color: #fff
-      font-size: 16px
-      transform: translate(-50%,-50%)
-      z-index: 2
+      span
+        position: absolute
+        top: 50%
+        left: 50%
+        display: block
+        color: #fff
+        font-size: 16px
+        transform: translate(-50%,-50%)
+        z-index: 2
 
-  @include media-sm
+  @include media-xs
+    height: auto
+    .container
+      padding-top: 60px
+    &__item
+      padding-left: 20px
+      padding-right: 20px
+      padding-top: 100px
+      padding-bottom: 40px
+    .title3
+      span
+        font-size: 24px

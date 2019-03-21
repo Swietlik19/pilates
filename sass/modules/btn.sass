@@ -54,12 +54,16 @@ a::before, button::before
     .btn__wrap
       &::before
         width: 100%
-    span
-      color: $accent
+      span
+        color: $accent
     .btn__icon
       opacity: 0
   &:active
     opacity: 0.7
+
+  @include media-sm
+    &__icon
+      display: none
 
 .burger
   width: 23px
@@ -145,4 +149,4 @@ a::before, button::before
     &::before
       border-color: $accent
 
-@include media-sm
+

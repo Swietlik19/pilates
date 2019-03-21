@@ -80,10 +80,10 @@ function headerAnimate() {
     $('.header__content').animate({
       top: 0,
       opacity: 1
-    },500);
+    },800);
     $('.header__wrapper').animate({
       opacity: 1
-    },500);
+    },800);
   }
 }
 
@@ -99,14 +99,23 @@ $(document).ready(function() {
     });
   });
 
-  $(".owl-carousel").owlCarousel({
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 5) {
+      $('.nav').addClass('nav--scrolled');
+    }
+    else {
+      $('.nav').removeClass('nav--scrolled');
+    }
+  });
+
+  $("#scheduleList").owlCarousel({
     margin:20,
     responsiveClass:true,
     responsive:{
         0:{
             items:1
         },
-        600:{
+        800:{
             items:2
         },
         1400:{
@@ -136,7 +145,7 @@ $(document).ready(function() {
         $(this).animate({
           top: 0,
           opacity: 1
-        },500);
+        },800);
       },
       tolerance: 50
     });

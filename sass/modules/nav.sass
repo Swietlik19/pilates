@@ -1,0 +1,49 @@
+.nav
+  @include myTransition
+  position: absolute
+  top: 0
+  width: 100%
+  z-index: 100
+  .nav__container
+    position: relative
+    display: flex
+    align-items: center
+    padding: 10px 0
+  .logo,.logo__img
+    width: 63px
+    height: 53px
+  .s-menu
+    left: 45%
+  .phone
+    @include myTransition
+    margin-left: auto
+    font-family: $ff-second
+    font-size: 14.3px
+    line-height: 18px
+    font-weight: 700
+    text-transform: uppercase
+    color: rgba(0,0,0,0.87)
+
+  &--scrolled
+    position: fixed
+    background-color: rgba($accent, 0.5)
+    box-shadow: 0px 2px 10px rgba(0,0,0, 0.1)
+    .phone
+      color: #fff
+
+  @include media-lg
+    .s-menu
+      left: 35%
+  @include media-md
+    .logo,.logo__img
+      width: 43px
+      height: 33px
+  @include media-sm
+    .phone
+      display: none
+  @include media-xs
+    .phone
+      display: none
+    .s-menu
+      right: 0
+      left: auto

@@ -13,9 +13,8 @@
     justify-content: center
     width: 100vw
     height: 100vh
-    padding: 0 30%
+    padding-left: 30%
     background-color: $accent
-    list-style: none
     overflow: hidden
     transition: all 0.5s ease
     z-index: 100
@@ -29,18 +28,26 @@
     font-weight: 500
     color: #fff
     text-decoration: none
+    &:hover
+      color: rgba(#fff,0.7)
   &__item
     position: relative
     margin-bottom: 50px
-    &--active::before
-      content: ''
-      position: absolute
-      top: 50%
-      left: -30px
-      width: 16px
-      height: 16px
-      background-color: #fff
-      border-radius: 50%
-      transform: translateY(-50%)
 
-@include media-sm
+  @include media-lg
+    &__item,
+    &__link
+      font-size: 40px
+  @include media-md
+    &__item,
+    &__link
+      font-size: 30px
+    &__item
+      margin-bottom: 30px
+  @include media-sm
+    &__item,
+    &__link
+      font-size: 24px
+    &__list
+      padding-left: 0
+      text-align: center

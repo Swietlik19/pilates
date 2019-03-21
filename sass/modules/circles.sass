@@ -33,3 +33,14 @@
         background-color: #fff
         border-radius: 50%
         transform: translate(-50%,-50%)
+
+  @include media-lg
+    .circle
+      &--big
+        width: 160vh
+        height: 160vh
+  @include media-sm
+    .circle
+      &--big
+        width: 900px
+        height: 900px

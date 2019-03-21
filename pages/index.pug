@@ -18,6 +18,28 @@ html(lang='ru')
 
     header.header(id="header")
       .header__wrapper
+      nav.nav
+        .container.nav__container
+          .logo.nav__logo
+            img.logo__img(src="img/logo.png" alt="логотип студии")
+          .s-menu
+            button.burger(id="s-menu-burger")
+              span.burger__line
+            .s-menu__list.s-menu__list--invisible
+              .s-menu__item
+                a.s-menu__link(href="#header") О нас
+              .s-menu__item
+                a.s-menu__link(href="#pilates") О пилатесе
+              .s-menu__item
+                a.s-menu__link(href="#schedule") Расписание и стоимость
+              .s-menu__item
+                a.s-menu__link(href="#") Как проходят занятия
+              .s-menu__item
+                a.s-menu__link(href="#") Отзывы
+              .s-menu__item
+                a.s-menu__link(href="#") Контакты
+              button.close(id="s-menu-close")
+          span.phone +7 918 365 07 07
       .container.header__container
         +section-number("01")
         .circles
@@ -30,32 +52,12 @@ html(lang='ru')
             use(xlink:href="#iconGithub")
           |Code
         .header__content
-          nav.header__nav
-            .logo.header__logo
-              img.logo__img(src="img/logo.png" width="63" height="53" alt="логотип студии")
-            .s-menu
-              button.burger(id="s-menu-burger")
-                span.burger__line
-              ul.s-menu__list.s-menu__list--invisible
-                li.s-menu__item.s-menu__item--active
-                  a.s-menu__link(href="") О нас
-                li.s-menu__item
-                  a.s-menu__link(href="#pilates") О пилатесе
-                li.s-menu__item
-                  a.s-menu__link(href="#schedule") Расписание и стоимость
-                li.s-menu__item
-                  a.s-menu__link(href="#") Как проходят занятия
-                li.s-menu__item
-                  a.s-menu__link(href="#") Отзывы
-                li.s-menu__item
-                  a.s-menu__link(href="#") Контакты
-                button.close(id="s-menu-close")
-            span.phone +7 918 365 07 07
           .header__about
             h1.title1 Студия пилатеса
-            .title__desc Твое здоровое тело через 10 занятий
+            p.title__desc Твое здоровое тело через 10 занятий
             a.btn.header__btn(href="#")
-              span.btn__wrap Смотреть расписание
+              span.btn__wrap
+                span Смотреть расписание
               svg.btn__icon
                 use(xlink:href="#iconArrow")
 
@@ -72,7 +74,7 @@ html(lang='ru')
       .container.schedule__container
         +section-number("03")
         h2.title2 Расписание и стоимость
-        .schedule__list.owl-carousel
+        .schedule__list.owl-carousel(id="scheduleList")
           .schedule__item
             h3.title3 Уровень
               span новичок
@@ -88,7 +90,7 @@ html(lang='ru')
                 th пт
                 td 9:00 — 10:00
             button.btn.schedule__btn
-              .btn__wrap
+              span.btn__wrap
                 span Записаться
               svg.btn__icon
                 use(xlink:href="#iconArrow")
@@ -107,7 +109,7 @@ html(lang='ru')
                 th пт
                 td 18:15 — 19:45
             button.btn.schedule__btn
-              .btn__wrap
+              span.btn__wrap
                 span Записаться
               svg.btn__icon
                 use(xlink:href="#iconArrow")
@@ -126,10 +128,11 @@ html(lang='ru')
                 th пт
                 td 20:00 — 21:30
             button.btn.schedule__btn
-              .btn__wrap
+              span.btn__wrap
                 span Записаться
               svg.btn__icon
                 use(xlink:href="#iconArrow")
+
 
 
     script(src="js/script.js?version=1")

@@ -22,6 +22,11 @@ img
   text-transform: uppercase
   letter-spacing: 0.075em
   color: $color-second
+  @include media-md
+    font-size: 40px
+    line-height: 60px
+  @include media-xs
+    text-align: center
 
 .title2
   position: relative
@@ -41,6 +46,13 @@ img
     opacity: 0.87
     background-color: #000
     transform: translateY(-50%)
+  @include media-md
+    font-size: 40px
+  @include media-xs
+    font-size: 30px
+    padding-left: 35px
+    &::before
+      width: 26px
 
 .title3
 
@@ -51,6 +63,10 @@ img
   font-weight: 300
   font-family: $ff-second
   color: $color-second
+  @include media-md
+    font-size: 16px
+  @include media-xs
+    text-align: center
 
 .accent-color
   color: $accent
@@ -59,6 +75,10 @@ img
   position: relative
   height: 100%
   margin: 0 15%
+  @include media-lg
+    margin: 0 10%
+  @include media-xs
+    margin: 0 5%
 
 .d-flex
   display: flex

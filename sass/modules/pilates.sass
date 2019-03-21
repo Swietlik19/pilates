@@ -11,4 +11,17 @@
   .text
     margin-bottom: 30px
 
+  @include media-lg
+    .container
+      background-size: 60%
+      background-position: 100% 100%
   @include media-sm
+    height: auto
+    .container
+      padding-bottom: 140px
+      background-size: 60%
+  @include media-xs
+    .container
+      padding-top: 60px
+    &__text
+      width: 100%

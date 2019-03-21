@@ -56,9 +56,9 @@ function headerAnimate() {
     $('.header__content').animate({
       top: 0,
       opacity: 1
-    },500);
+    },800);
     $('.header__wrapper').animate({
       opacity: 1
-    },500);
+    },800);
   }
 }
